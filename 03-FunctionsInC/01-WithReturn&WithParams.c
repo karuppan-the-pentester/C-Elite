@@ -10,7 +10,7 @@ int add(int a , int b){
 
 // Creating the main function
 int main(){
- 
+
     int a,b;
 
     printf("Enter the value of A: ");
