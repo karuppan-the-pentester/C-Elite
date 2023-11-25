@@ -11,7 +11,7 @@ int add(){
 
     printf("Enter the value of B: ");
     scanf("%d",&b);
-    
+
     // Returning the func
     return a + b;
 }
