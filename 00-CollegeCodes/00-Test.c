@@ -1,6 +1,11 @@
 #include <stdio.h>
 
-int isPalindrome(int n) {
+int Palindrome() {
+
+    int n;
+    printf("Enter a number: ");
+    scanf("%d", &n);
+
     int reversed = 0;
     int original = n;
     int remainder;
@@ -11,21 +16,127 @@ int isPalindrome(int n) {
         n = n / 10;
     }
 
-    return (original == reversed);
-}
-
-
-int main() {
-    int num;
-    printf("Enter a number: ");
-    scanf("%d", &num);
-
-    if (isPalindrome(num)) {
-        printf("%d is a palindrome number.\n", num);
+    if (original == reversed) {
+        printf("%d is a palindrome number.\n", n);
     }
     else {
-        printf("%d is not a palindrome number.\n", num);
+        printf("%d is not a palindrome number.\n", n);
+    }
+}
+
+#include <stdio.h>
+
+void Break(){
+
+    for (int i=0;i<50;i++){
+        printf("%d\n",i);
+        if(i==33){
+            printf("This loop can't execute");
+            break;
+        }
     }
 
-    return 0;
 }
+
+void Continue(){
+
+    for (int i=1;i<5;i++){
+        for (int j = 1; j < 5; ++j) {
+
+            printf("%d%d ",i,j);
+            if(i!=j){
+                printf("  ");
+                break;
+            }
+        }
+        printf("\n");
+    }
+}
+
+void Goto(){
+
+    int i;
+    inputs: printf("Enter the value which is greater than 10: ");
+    scanf("%d",&i);
+    if(i>10){
+        printf("Thank You\n");
+    } else{
+        printf("The Value is less than 10,Sorry");
+        goto inputs;
+    }
+
+
+}
+
+void Star(){
+
+    int n;
+    printf("Enter the number of rows: ");
+    scanf("%d",&n);
+
+
+    for(int i=0;i<n;i++){
+
+        printf("\t\t\t\t\t");
+
+        for (int j = 0; j < n-i ; ++j) {
+            printf(" ");
+
+        }
+
+        for (int j = 0;  j < (2*i)+1; j++) {
+            printf("*");
+        }
+
+        printf("\n");
+
+
+    }
+
+
+    for(int i=0;i<n-1;i++){
+
+        printf("\t\t\t\t\t");
+
+        for (int j = n; j > n-i ; j--) {
+            printf(" ");
+
+        }
+
+        for (int j = 2*n;  j > (2*i)+1; j--) {
+            printf("*");
+        }
+
+        printf("\n");
+
+    }
+}
+
+void OnseStar(){
+    int n = 15;
+    for(int i=0;i<n;i++){
+
+        printf("\t\t\t\t\t");
+
+        for (int j = n; j > n-i ; j--) {
+            printf(" ");
+        }
+
+        for (int j = n;  j > i; j--) {
+            printf("*");
+        }
+
+
+
+        printf("\n");
+
+    }
+}
+
+void main(){
+
+    OnseStar();
+
+}
+
+
