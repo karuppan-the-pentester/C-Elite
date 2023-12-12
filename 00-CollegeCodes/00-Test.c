@@ -151,7 +151,7 @@ void HalfStar(){
 
 void main(){
 
-    HalfStar();
+    Star();
 
 }
 
