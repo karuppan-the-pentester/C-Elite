@@ -1,3 +1,4 @@
 #Ignoring Cmake folder from git commit
 cmake-build-debug/
 .idea/
+*.exe
