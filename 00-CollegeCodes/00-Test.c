@@ -147,12 +147,50 @@ void HalfStar(){
 }
 
 
+void SumOfAddEven() {
+    int odd = 0, even = 0, n = 5;
+    for (int i = 0; i< n+1; i++) {
+        if (i % 2 == 0) {
+            even = even + i;
+        } else {
+            odd = odd + i;
+        }
+    }
+    printf("Odd: %d \nEven: %d",odd,even);
+}
 
 
-void main(){
+void OddEven() {
+    int num;
+    scanf("%d", &num);
+    if (num % 2 == 0)
+    {
+        printf("Even\n");
+    }else
+    {
+        printf("Odd\n");
+    }
 
-    Star();
+    scanf("%d", &num);
+    (num % 2 == 0) ? printf("Even\n") : printf("Odd\n");
 
+
+
+    scanf("%d", &num);
+    if (num & 1 == 0)
+    {
+        printf("Even.\n");
+    }
+    else
+    {
+        printf("Odd");
+    }
+}
+
+int main(){
+
+    HalfStar()   ;
+    return 0;
 }
 
 
