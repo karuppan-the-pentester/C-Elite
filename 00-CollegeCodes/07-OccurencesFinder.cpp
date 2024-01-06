@@ -15,7 +15,7 @@ void printFrequency(string s) {
 
     for (int i = 0; i < 256; i++) {
         if (freq[i] != 0) {
-            cout << (char)i << " : " << freq[i] << endl;
+            cout << (char)i << " = " << freq[i] << ",  ";
         }
     }
 }
